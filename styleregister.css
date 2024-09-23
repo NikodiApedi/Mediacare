@@ -1,0 +1,422 @@
+* {margin:0; padding:0;
+    text-decoration: none;
+    font-family:'Roboto', sans-serif;
+    box-sizing: border-box;
+    }
+    
+    
+    header {
+    
+    }
+    .nav {
+      margin:auto;
+      height: 80px;
+      padding: 10px 40px;
+      width: 100%;
+      position: fixed;
+      background-color:rgb(255, 255, 255);
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
+      padding: 10px;
+      z-index:10
+     } 
+    
+    .header{
+      display:inline;
+      font-size:33px;
+      font-weight:bold;
+      color:black;
+      line-height: 30px;
+    }
+    .Menu{
+      display:inline;
+      float:right;
+      font-size: 18px;
+      ling-height: 30px;
+      margin-top: 20px;
+    }
+    .Menu a{
+      padding: 10px 15px;
+      font-weight: 550px;
+      color: black;
+      
+    }
+    
+    .Menu a:hover{
+      color: #38abab;
+    }
+    .Menu a.login{
+      border: 2px solid #38abab;
+      border-radius: 30px;
+      background-color: #38abab;
+      color: white;
+      
+    }
+    .Menu a.login:hover{
+      color: #38abab;
+      background-color: white;
+    }
+    .Menu a.active {
+      color:black;
+      background-color:transparent;
+      text-decoration: 2px underline #38abab ;
+    }
+    .Menu a.active:hover{
+      color: #38abab;
+    }
+    .dropdown{
+      position: relative;
+      display: inline-block;
+    }
+    .content{
+      display: none;
+      position: absolute;
+      background: white ;
+      min-width: 120px;
+      font-size: 16px;
+      top:34px;
+      z-index:1;
+      border-top:1px solid black;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+      border-radius: 5px;
+    }
+     .dropdown:hover .content{
+      display: block;
+     }
+     .content a{
+      padding:12px 10px;
+      display:block;
+      
+     }
+     .content a:hover {
+      color: cyan
+      background-color:black
+     }
+    
+     body{
+        background-image: white;
+        background-size:cover;
+        background-position: relative;
+        background-attachment: fixed;
+        background-blend-mode: darken;
+        }
+      
+        
+
+        .container {
+            top:45%;
+            width: 100%;
+            text-align: center;
+            color: white;
+            position: absolute;
+            font-style: normal;
+            font-size: large;
+            transform: translateY(-50%);
+        }
+        .container h1{
+          font-size: 60px;
+          margin-top: 80px;
+        }
+        .container p{
+          margin: 50px auto;
+          font-weight: 100;
+          line-height: 25px;
+          font-size: larger;
+        }
+
+
+     #check, .btn {
+      display: none;
+     }
+     @media (max-width: 600px){
+      .container{
+        display: none;
+      }
+    .btn{
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .btn label{
+      display: inline-block;
+      width: 80px;
+      height: 70px;
+      padding: 25px;
+    }
+    .btn label span{
+      display: block;
+      height: 10px;
+      width: 20px;
+      border-top: 3px solid black;
+    }
+    .btn label:hover, #check:checked ~ .btn label{
+      background-color: #38abab;
+      transition: all .5s ease;
+    }
+    .Menu{
+      position:absolute;
+      display: block;
+      text-align: center;
+      width: 100%;
+      background-color: #38abab;
+      top: 60px;
+      right: 0;
+      overflow-y: hidden;
+    }
+    .Menu a{
+      display: block;
+      color: white;
+    }
+    .dropdown a{
+      color: white;
+    }
+      #check:not(checked)~ .Menu{
+        height: 0px;
+      }
+    #check:checked~ .Menu{
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .Menu .dropdown{
+      float: none;
+      width: 100%;
+    }
+    .Menu .content{
+      position: relative;
+      background-color: white;
+      top: 0;
+      left: 0;
+      color: black;
+      border-bottom: 1px solid black;
+    }
+    .Menu a:hover{
+      color:#ffffff;
+      text-decoration: underline;
+    }
+    .Menu a.active {
+      color:#ffffff;
+      background-color:#38abab;
+      text-decoration: underline;
+     }
+     .Menu a.active:hover {
+        color:#ffffff;
+        background-color:#38abab;
+        text-decoration: underline;
+       }
+     .Menu .content a{
+      color:black
+     }
+     .Menu a.login:hover{
+        color: white;
+        background-color: #38abab;
+      }
+    }
+    
+    
+
+    .container {
+        top:45%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        position: absolute;
+        font-style: normal;
+        font-size: large;
+        transform: translateY(-50%);
+    }
+    .container h1{
+      font-size: 60px;
+      margin-top: 80px;
+    }
+    .container p{
+      margin: 50px auto;
+      font-weight: 100;
+      line-height: 25px;
+      font-size: larger;
+    }
+    button{
+      width: 150px;
+      margin: 20px 10px;
+      padding: 15px 0;
+      text-align: center;
+      color: white;
+      background-color: #38abab;
+      border: #38abab;
+      position: relative;
+      cursor: pointer;
+      font-size: large;
+    }
+    button:hover{
+      color: #38abab;
+      background-color: white;
+    }
+    
+    
+    
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    footer{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: auto;
+      width: 100vw;
+      font-family: "Roboto";
+      padding-top: 0px;
+      box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
+    }
+    .footer-content{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .socials{
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 1rem 1rem 0;
+    }
+    .socials li{
+      margin: 0 7px;
+    }
+    .socials a{
+      text-decoration: none;
+      color: black;
+    }
+    .socials a i{
+      font-size: 1.1rem;
+      transition: color .4s ease;
+    
+    }
+    .socials a:hover i{
+      color: #38abab;
+    }
+    
+    .footer-bottom{
+      background: white;
+      width: 100vw;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .footer-bottom p{
+      font-size: 14px;
+      word-spacing: 2px;
+      text-transform: capitalize;
+    }
+    .footer-bottom span{
+      text-transform: uppercase;
+      opacity: .4;
+      font-weight: 200;
+    }
+    
+
+    #card {
+        background: #fbfbfb;
+        box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+        height: 700px;
+        margin: 30rem auto 8.1rem auto;
+        width: 480px;
+}
+      
+#card-content {
+    padding: 12px 44px;
+}
+#card-title {
+    font-family: "Roboto";
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+    color: black;
+  
+}
+a {
+    text-decoration: none;
+}
+label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+    text-align: left;
+    color: black;
+}
+.gender{
+    accent-color: #38abab;
+    cursor: pointer;
+   
+}
+input[type="radio"] {
+    margin-left: 0;
+    margin-top: 10px;
+    accent-color: #38abab;
+    text-align: left;
+
+}
+
+fieldset{
+    border-color: transparent;
+    text-align: left;
+    
+    
+}
+.form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.form-border {
+    background: -webkit-linear-gradient(right, black,black);
+    height: 2px;
+    width: 100%;
+    
+}
+.form-content {
+    background: #fbfbfb;
+    border: none;
+    outline: none;
+    padding-top: 14px;
+}
+#signupp {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 16px;
+    text-align: center;
+}
+#signup {
+    color: #38abab;
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    text-decoration: underline;
+    margin-top: 16px;
+    text-align: center;
+}
+#submit-btn {
+    background-color:#38abab;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: 0.25s;
+    width: 170px;
+    margin-bottom: 10px;
+}
+#submit-btn:hover {
+    background-color:white;
+    color: #38abab;
+}
+

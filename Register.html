@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Medicare</title>
+        <link rel="stylesheet" href="styleregister.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+        <!-- digunakan untuk mengambil logo media sosial di footer -->
+        
+     </head>
+     <header>
+      <div class="nav">
+        <img src="icon.png">
+        <div class="header">
+        </div>
+        <input type="checkbox" id="check">
+        <div class="btn">
+          <label for="check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      <div class="Menu">
+              <a href="medicare.html" >Home</a>
+              <div class="dropdown">
+                <a href="Products.html" class="dropbtn">Products</a>
+                <div class="content">
+                  <a href="Products.html">Healthcare</a>
+                  <a href="Products.html">Cosmetic</a>
+                  <a href="Products.html">Misc.</a>
+                </div>
+              </div> 
+              <a href="AboutUs.html">About Us</a>
+              <a href='#' class="active">Register</a>
+              <a href='login.html' class="login">Login</a>         
+      </header>
+
+     <body>
+        <div class="container">
+          <div id="card">
+             <div id="card-content">
+                 <div id="card-title">
+                 <h2>Register</h2>
+        <form action="" method="POST" class="form" name="validasi_form" onsubmit="return kirim(this);"> 
+    <label for="username" style="padding-top:40px">Full Name</label>
+    <input class="form-content" type="name" name="username" id="username"/>
+
+    <div class="form-border"></div>
+
+    
+
+    <label for="user-email" style="padding-top:40px">Email</label>
+    <input class="form-content" type="email" name="email" id="email"/>
+  
+    <div class="form-border"></div>
+    <label style="padding-top:40px"> Gender </label>
+    <fieldset data-role="controlgroup" 
+    data-type="horizontal">
+    <label>
+        <input id="gender" type="radio" name="editList" value="Male"/>Male
+    </label>
+    <label >
+        <input id="gender" type="radio" name="editList" value="female"/>Female
+    </label>
+    </fieldset>
+
+    <label style="padding-top:30px">City<br>
+        <select style="margin-top:10px" name="City" required>
+            <option value="JKT">Jakarta</option>
+            <option value="BGR">Bogor</option>
+            <option value="BDG">Bandung</option>
+            <option value="SBY">Surabaya</option>
+            <option value="lainnya">lainnya</option>
+          </select>
+    </label>
+  
+
+    <label for="user-password" style="padding-top:40px">Password</label>
+    <input class="form-content" type="password" name="password1" id="password1" />
+        <div class="form-border"></div>
+
+    <label for="user-password" style="padding-top:40px">Confirm Password</label>
+    <input class="form-content" type="password" name="password2" id="password2" />
+    <span id="pesan" class="pesan-confirm"></span>
+        <div class="form-border"></div>
+  
+        <input id="submit-btn" type="submit" name="submit" value="Register" onclick=" return kirim()">
+    
+                 </form>
+              </div>
+           </div>
+          </div>
+      </div>
+
+     </body>
+     
+     <script>
+        function kirim(form) {
+        var minchar = 8;
+         //membuat minimal char dari inputan username
+         var gender = document.getElementsByName('editList');
+        var genValue = false;
+        pola_email=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+        for(var i=0; i<gender.length;i++){
+    if(gender[i].checked == true){
+        genValue = true;    
+    }
+}
+if(!genValue){
+    alert("Harus dipilih.");
+    return false;
+}
+        if (form.username.value=="") {
+        alert("Harus Diisi.");
+        form.username.focus();
+        return (false);
+
+    }else if (form.email.value=="") {
+     alert("Harus diisi dan sesuai dengan format email. Contoh: asd@asd.com (Benar) asd@@com (Salah)");
+     form.username.focus();
+     return (false);
+   return (false);
+   } else if (form.password1.value==""){
+    alert("Harus diisi, minimal memiliki 8 karakter, dan mengandung setidaknya satu huruf kapital serta satu angka.");
+    form.password1.focus();
+    return (false);
+   } else if (form.password2.value==""){
+    alert("Harus diisi dan isinya harus sama persis dengan field Password.");
+    form.password2.focus();
+    return (false);
+   } else {
+     return (true);
+  }
+ 
+        }
+ //membuat validasi password 1 dan password 2 (pencocokan)
+ 
+
+     </script>
+    
+        <footer>
+          <div class="footer-content">
+        </div>
+        <div class="footer-bottom">
+          <ul class="socials">
+            <li><a href="https://www.twitter.com"target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://id-id.facebook.com"target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com"target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        <p>copyright &copy; 2022 RaymondFrederico. All Rights Reserved.</p>
+        </div>
+        </footer>
+      </body>
+</html>

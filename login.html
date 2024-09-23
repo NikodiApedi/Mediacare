@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Medicare</title>
+        <link rel="stylesheet" href="stylelogin.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+        <!-- digunakan untuk mengambil logo media sosial di footer -->
+        
+     </head>
+     <header>
+      <div class="nav">
+        <img src="icon.png">
+        <div class="header">
+        </div>
+        <input type="checkbox" id="check">
+        <div class="btn">
+          <label for="check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+      <div class="Menu">
+              <a href="medicare.html" >Home</a>
+              <div class="dropdown">
+                <a href="Products.html" class="dropbtn">Products</a>
+                <div class="content">
+                  <a href="Products.html">Healthcare</a>
+                  <a href="Products.html">Cosmetic</a>
+                  <a href="Products.html">Misc.</a>
+                </div>
+              </div> 
+              <a href="AboutUs.html">About Us</a>
+              <a href='Register.html'>Register</a>
+              <a href='login.html' class="login">Login</a>         
+      </header>
+
+     <body>
+        <div class="container">
+          <div id="card">
+             <div id="card-content">
+                 <div id="card-title">
+                 <h2>Login</h2>
+                 <form action="" method="POST"class="form" onsubmit="return validasi();"> 
+    <label for="user-email" style="padding-top:40px">Email</label>
+    <input class="form-content" type="email" name="email" id="email"/>
+  
+        <div class="form-border"></div>
+
+    <label for="user-password" style="padding-top:22px">Password</label>
+    <input class="form-content" type="password" name="password" id="password"/>
+        <div class="form-border"></div>
+  
+        <input id="submit-btn" type="submit" name="submit" value="Login" onclick=" return kirim()">
+    
+    <p id="signupp">Don't have account yet? <a href="Register.html" id="signup"> Register</a> now !</p>
+                 </form>
+              </div>
+           </div>
+          </div>
+      </div>
+
+     </body>
+     
+     <script>
+        function kirim() {
+        var a = document.getElementById('email').value;
+        var b = document.getElementById('password').value;
+        if (a == ""){
+            alert('Harus diisi');
+            return false;
+        }  
+         if (b == ""){
+            alert('Harus diisi');
+            return false;
+        }  
+    }
+     </script>
+    
+        <footer>
+          <div class="footer-content">
+        </div>
+        <div class="footer-bottom">
+          <ul class="socials">
+            <li><a href="https://www.twitter.com"target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://id-id.facebook.com"target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com"target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+        <p>copyright &copy; 2022 RaymondFrederico. All Rights Reserved.</p>
+        </div>
+        </footer>
+      </body>
+</html>
